@@ -3,6 +3,26 @@
 ## I'm learning web design and training with Github Pages.
 
 <label>
-   <p> This is a web static page make with bootstrap, html and css hosted by Github Pages <img heigth="20px" width="20" src="https://www.flaticon.com/svg/static/icons/svg/2111/2111425.svg" alt="Logo pequena e quadrada do github"> </p>
+   <p> This is a web static page make with bootstrap, html and css hosted by Github Pages.
+   </p>
 
 </label>
+
+<div class="footer">
+   <!-- Icones de ferramenteas utilizadas -->
+   
+   ## Technologies used in this repo :octocat:
+
+   <!--Github -->
+   <img heigth="20px" width="20px" src="https://www.flaticon.com/svg/static/icons/svg/2111/2111425.svg" alt="Logo pequena e quadrada do github">
+
+   <!--Bootstrap-->
+   <img heigth="20px" width="20px" src="https://simpleicons.org/icons/bootstrap.svg" alt="Logo pequena e quadrada da tecnologia Bootstrap">
+
+   <!--HTML 5-->
+   <img heigth="20px" width="20px" src="https://www.flaticon.com/svg/static/icons/svg/919/919827.svg" alt="Logo pequena e quadrada da tecnologia HTML5">
+
+   <!-- CSS 3 -->
+   <img heigth="20px" width="20px" src="https://www.flaticon.com/svg/static/icons/svg/919/919826.svg" alt="Logo pequena e quadrada da tecnologia CSS3">
+
+</div class="footer">
