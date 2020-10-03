@@ -42,7 +42,7 @@ img {
 
  a{
      text-decoration: none;
-     color: #f6f4e6;
+     color: #fddb3a;
      transition: color 1s;
  }
 
@@ -54,6 +54,8 @@ img {
  }
 
  a:hover {
+     transition: 1s;
+     font-weight: bold;
      color: black;
      background: #fddb3a;
  }
