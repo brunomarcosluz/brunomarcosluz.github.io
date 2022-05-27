@@ -1,4 +1,26 @@
 body {
   font-family: 'Arial';
   background-color: #ffff;
+  margin: 0px;
+}
+
+.profile-picture-div {
+  background-color: aqua;
+}
+
+.profile-image {
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+.links {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr;
+  background-color: aqua;
+}
+
+a {
+  color: black; /* Trocar depois*/
+  text-decoration: none;
 }
