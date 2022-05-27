@@ -11,6 +11,13 @@ body {
 .profile-image {
   max-width: 300px;
   border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-name {
+  text-align: center;
+  padding: 10px;
 }
 
 .links {
