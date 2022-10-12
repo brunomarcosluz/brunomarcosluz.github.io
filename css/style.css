@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+}
+
+#header-main {
+  color: #00FF2A;
+  background-color: #0E0D0D;
+  padding: 10px;
+}
+
+#marca {
+  font-style: bold;
+  padding: auto;
+  font-size: 36px;
+  margin-top: 5px;
+}
+
+#header-main a {
+  color: #00FF2A;
+  text-decoration: none;
+  text-align: left;
+}
