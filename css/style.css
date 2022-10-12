@@ -1,24 +1,49 @@
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'League Spartan', sans-serif;
 }
 
-#header-main {
-  color: #00FF2A;
+.g-header {
   background-color: #0E0D0D;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  font-weight: bold;
 }
 
-#marca {
-  font-style: bold;
-  padding: auto;
-  font-size: 36px;
-  margin-top: 5px;
+.g-header #marca {
+  padding: 30px;
+  grid-column: 1;
 }
 
-#header-main a {
+.g-header #marca a {
   color: #00FF2A;
   text-decoration: none;
-  text-align: left;
+  font-size: 36px;
+}
+
+.g-header #navbar {
+  padding: 40px;
+  grid-column: 3;
+}
+
+.g-header #navbar ul {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 80px 80px;
+}
+
+.g-header #navbar a {
+  color: #00FF2A;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.g-header #marca a:hover {
+  color: white;
+}
+
+.g-header #navbar a:hover {
+  color: white;
 }
