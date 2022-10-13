@@ -1,0 +1,4 @@
+Preto: #0E0D0D
+Verde: #00FF2A
+Vermelho: #E01111
+Azul: #1B56EE
