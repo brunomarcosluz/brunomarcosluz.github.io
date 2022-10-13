@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Estilização Site -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/about-me.css">
+
   <!-- Linking Font League Spartan -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,12 +29,21 @@
     </nav>
   </div>
 
-  <div class="g-main">
-    <h1>The choice is yours.</h1>
+  <div class="g-home">
+    <h1 id="home-title">The choice is yours.</h1>
     <div class="g-pills">
-      <img src="img/red-pill.svg" alt="red-pill">
-      <img src="img/blue-pill.svg" alt="blue-pill">
+      <a href="#about-you"><img src="img/red-pill.svg" alt="red-pill"></a>
+      <a href="#about-title"><img src="img/blue-pill.svg" alt="blue-pill"></a>
     </div>
+  </div>
+
+  <div class="g-about">
+    <h1 id="about-title">Who am I?</h1>
+    <p id="about-text">
+      I’m Bruno Marcos Luz, a brazilian software developer living in Campinas - São Paulo. <br> I believe
+      whitout love nothing you do is relevant.
+    </p>
+    <img src="img/brazil-flag.svg" alt="brazil-flag">
   </div>
 
 </body>

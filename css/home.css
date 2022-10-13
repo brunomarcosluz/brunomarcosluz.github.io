@@ -1,0 +1,19 @@
+.g-home {
+  margin-top: 300px;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.g-home #home-title {
+  padding: 40px 40px 40px 40px;
+  color: #00FF2A;
+}
+
+.g-pills {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}

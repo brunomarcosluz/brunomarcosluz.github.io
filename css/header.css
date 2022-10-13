@@ -1,0 +1,47 @@
+.g-header {
+  background-color: #0E0D0D;
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 1vh;
+}
+
+.g-header #marca {
+  padding: 30px;
+  grid-column: 1;
+}
+
+.g-header #marca a {
+  color: #00FF2A;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+.g-header #navbar {
+  padding: 40px;
+  grid-column: 3;
+}
+
+.g-header #navbar ul {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 80px 80px;
+  list-style: none;
+}
+
+.g-header #navbar a {
+  color: #00FF2A;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.g-header #marca a:hover {
+  color: white;
+}
+
+.g-header #navbar a:hover {
+  color: white;
+}
