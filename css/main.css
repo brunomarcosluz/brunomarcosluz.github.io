@@ -4,8 +4,29 @@
   box-sizing: border-box;
   font-family: 'League Spartan', sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #0E0D0D;
+}
+
+h1::selection {
+  background-color: #00FF2A;
+  color: #0E0D0D;
+}
+
+p::selection {
+  background-color: #00FF2A;
+  color: #0E0D0D;
+}
+
+a::selection {
+  background-color: #00FF2A;
+  color: #0E0D0D;
+}
+
+img::selection {
+  background-color: #00FF2A;
+  color: #0E0D0D;
 }

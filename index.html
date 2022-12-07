@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Estilização Site -->
+  <link rel="icon" href="/img/favicon.ico" type="image/png">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/home.css">
@@ -23,28 +24,50 @@
     <h1 id="marca"><a href="#">bml.</a></h1>
     <nav id="navbar">
       <ul>
-        <li><a href="#">about me.</a></li>
-        <li><a href="#">projects.</a></li>
+        <li><a href="#about-title">about me.</a></li>
+        <li><a href="#projects">projects.</a></li>
       </ul>
     </nav>
   </div>
 
-  <div class="g-home">
-    <h1 id="home-title">The choice is yours.</h1>
-    <div class="g-pills">
-      <a href="#about-you"><img src="img/red-pill.svg" alt="red-pill"></a>
-      <a href="#about-title"><img src="img/blue-pill.svg" alt="blue-pill"></a>
+  <section>
+    <div class="container-home">
+      <div class="g-home">
+        <h1 id="home-title">The choice is yours.</h1>
+        <div class="g-pills">
+          <a href="#about-you" id="red-pill"><img src="img/red-pill.svg" alt="red-pill"></a>
+          <a href="#about-title" id="blue-pill"><img src="img/blue-pill.svg" alt="blue-pill"></a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="g-about">
-    <h1 id="about-title">Who am I?</h1>
-    <p id="about-text">
-      I’m Bruno Marcos Luz, a brazilian software developer living in Campinas - São Paulo. <br> I believe
-      whitout love nothing you do is relevant.
-    </p>
-    <img src="img/brazil-flag.svg" alt="brazil-flag">
-  </div>
+  </section>
+
+  <section>
+    <div class="container-about">
+      <div class="g-about">
+        <h1 id="about-title">Who am I?</h1>
+        <p id="about-text">
+          I’m Bruno Marcos Luz, a brazilian software developer living in Campinas - São Paulo. <br> I believe
+          whitout love nothing you do is relevant.
+        </p>
+        <img src="img/brazil-flag.svg" alt="brazil-flag">
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects">
+    <div class="container-projects">
+      <div class="g-projects">
+        <h1>Highlighted Projects</h1>
+        <div class="g-proj-row"></div>
+        <img src="" alt="Github">
+      </div>
+    </div>
+
+  </section>
+
 
 </body>
 
