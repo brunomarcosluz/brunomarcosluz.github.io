@@ -1,8 +1,14 @@
+.container-about {
+  width: 100vw;
+  height: 100vh;
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
 .g-about {
-  padding: 0px 50px 0px 50px;
   display: grid;
+  padding: 0px 50px 0px 50px;
   grid-template-columns: 1fr;
-  margin-top: 60%;
 }
 
 .g-about #about-title {

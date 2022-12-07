@@ -1,3 +1,10 @@
+.container-home {
+  width: 100vw;
+  height: 100vh;
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
 .g-home {
   margin-top: 300px;
   background-color: transparent;
