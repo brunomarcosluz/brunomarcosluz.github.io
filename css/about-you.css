@@ -27,3 +27,14 @@
 #rabbit {
   padding: 40px;
 }
+
+#white-rabbit {
+  background-color: #00FF2A;
+  color: #0E0D0D;
+  padding: 2px;
+}
+
+#white-rabbit::selection {
+  background-color: #0E0D0D;
+  color: white;
+}
