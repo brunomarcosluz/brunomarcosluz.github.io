@@ -14,8 +14,9 @@
 }
 
 .g-home #home-title {
-  padding: 40px 40px 40px 40px;
+  padding: 40px;
   color: #00FF2A;
+  font-size: 36px;
 }
 
 .g-pills {

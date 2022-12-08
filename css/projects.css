@@ -1,0 +1,26 @@
+.container-projects {
+  width: 100vw;
+  height: 100vh;
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+#project-title {
+  padding: 40px;
+  font-size: 36px;
+  color: #00FF2A;
+}
+
+.g-projects {
+  display: grid;
+}
+
+.g-proj-row {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+#github-icon {
+  padding: 40px;
+}
