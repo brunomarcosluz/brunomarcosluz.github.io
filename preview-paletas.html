@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preview Paletas — Bruno Luz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F0F0EE;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #1C1C1C;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 48px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .option {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      background: white;
+    }
+    .option-label {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #888;
+      padding: 16px 0 4px;
+    }
+    .option-name {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #1C1C1C;
+      padding: 0 0 20px;
+    }
+
+    /* ── HERO MOCKUP ── */
+    .hero-mock {
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-mock .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .hero-mock .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #4ade80;
+    }
+    .hero-mock .eyebrow {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .hero-mock .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
+    .hero-mock .title em { font-style: italic; }
+    .hero-mock .desc {
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      max-width: 300px;
+    }
+    .hero-mock .actions { display: flex; gap: 12px; align-items: center; }
+    .hero-mock .btn {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .hero-mock .btn-ghost {
+      background: transparent;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 10px 0;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+    }
+
+    /* CARDS ROW */
+    .cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 24px 28px;
+    }
+    .mini-card {
+      border-radius: 12px;
+      padding: 14px;
+      border-width: 1.5px;
+      border-style: solid;
+    }
+    .mini-card .card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .mini-card .card-txt {
+      font-size: 10px;
+      line-height: 1.4;
+    }
+
+    /* SWATCHES */
+    .swatches {
+      display: flex;
+      gap: 0;
+      padding: 20px 28px;
+      border-top-width: 1px;
+      border-top-style: solid;
+    }
+    .swatch {
+      flex: 1;
+      height: 36px;
+      position: relative;
+    }
+    .swatch:first-child { border-radius: 8px 0 0 8px; }
+    .swatch:last-child { border-radius: 0 8px 8px 0; }
+    .swatch-label {
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 9px;
+      color: #888;
+      white-space: nowrap;
+    }
+    .swatches-wrap { padding-bottom: 36px; }
+
+    /* ══════════════════════════
+       OPÇÃO A — Slate + Teal
+    ══════════════════════════ */
+    .opt-a .hero-mock { background: #0C1A29; }
+    .opt-a .badge { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; }
+    .opt-a .eyebrow { color: #5EEAD4; }
+    .opt-a .title { color: #FFFFFF; }
+    .opt-a .title em { color: #2DD4BF; }
+    .opt-a .desc { color: rgba(255,255,255,0.5); }
+    .opt-a .btn { background: #0D9488; color: white; }
+    .opt-a .btn-ghost { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.2); }
+    .opt-a .cards-row { background: #F0F9FF; }
+    .opt-a .mini-card { background: white; border-color: #BAE6FD; }
+    .opt-a .card-num { color: #0D9488; }
+    .opt-a .card-txt { color: #64748B; }
+    .opt-a .swatches { border-color: #E2E8F0; background: white; }
+
+    /* ══════════════════════════
+       OPÇÃO B — Charcoal + Violeta
+    ══════════════════════════ */
+    .opt-b .hero-mock { background: #12101A; }
+    .opt-b .badge { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; }
+    .opt-b .eyebrow { color: #C4B5FD; }
+    .opt-b .title { color: #FFFFFF; }
+    .opt-b .title em { color: #A78BFA; }
+    .opt-b .desc { color: rgba(255,255,255,0.5); }
+    .opt-b .btn { background: #7C3AED; color: white; }
+    .opt-b .btn-ghost { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.2); }
+    .opt-b .cards-row { background: #FAF9FF; }
+    .opt-b .mini-card { background: white; border-color: #DDD6FE; }
+    .opt-b .card-num { color: #7C3AED; }
+    .opt-b .card-txt { color: #6B7280; }
+    .opt-b .swatches { border-color: #EDE9FE; background: white; }
+
+    /* ══════════════════════════
+       OPÇÃO C — Escuro + Terracota
+    ══════════════════════════ */
+    .opt-c .hero-mock { background: #1A110D; }
+    .opt-c .badge { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; }
+    .opt-c .eyebrow { color: #FDBA74; }
+    .opt-c .title { color: #FFFFFF; }
+    .opt-c .title em { color: #FB923C; }
+    .opt-c .desc { color: rgba(255,255,255,0.5); }
+    .opt-c .btn { background: #EA580C; color: white; }
+    .opt-c .btn-ghost { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.2); }
+    .opt-c .cards-row { background: #FFF7F3; }
+    .opt-c .mini-card { background: white; border-color: #FED7AA; }
+    .opt-c .card-num { color: #EA580C; }
+    .opt-c .card-txt { color: #6B7280; }
+    .opt-c .swatches { border-color: #FFEDD5; background: white; }
+
+    /* ══════════════════════════
+       ATUAL (referência)
+    ══════════════════════════ */
+    .opt-current {
+      opacity: 0.65;
+    }
+    .opt-current .hero-mock { background: #1A2744; }
+    .opt-current .badge { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; }
+    .opt-current .eyebrow { color: #E8B84B; }
+    .opt-current .title { color: #FFFFFF; }
+    .opt-current .title em { color: #E8B84B; }
+    .opt-current .desc { color: rgba(255,255,255,0.5); }
+    .opt-current .btn { background: #C9993A; color: white; }
+    .opt-current .btn-ghost { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.2); }
+    .opt-current .cards-row { background: #F7F6F2; }
+    .opt-current .mini-card { background: white; border-color: #E5E3DC; }
+    .opt-current .card-num { color: #C9993A; }
+    .opt-current .card-txt { color: #6B7280; }
+    .opt-current .swatches { border-color: #E5E3DC; background: white; }
+
+    .section-title-row {
+      max-width: 1200px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .section-title-row h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: #888;
+      font-weight: 400;
+    }
+    .section-title-row hr {
+      flex: 1;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    .note {
+      max-width: 800px;
+      margin: 48px auto 0;
+      background: white;
+      border-radius: 16px;
+      padding: 28px 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    }
+    .note h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #1C1C1C;
+      margin-bottom: 16px;
+    }
+    .note table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .note td, .note th {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid #F0F0EE;
+    }
+    .note th {
+      font-weight: 600;
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .note td:first-child { font-weight: 600; color: #1C1C1C; }
+    .dot-a { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #0D9488; margin-right: 6px; }
+    .dot-b { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #7C3AED; margin-right: 6px; }
+    .dot-c { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #EA580C; margin-right: 6px; }
+  </style>
+</head>
+<body>
+
+  <h1>Sugestões de Paleta</h1>
+  <p class="subtitle">3 opções profissionais para o seu portfólio — escolha uma e aplico no site</p>
+
+  <div class="section-title-row">
+    <h2>Opções novas</h2>
+    <hr/>
+  </div>
+
+  <div class="grid">
+
+    <!-- OPÇÃO A -->
+    <div class="option opt-a">
+      <div class="option-label">Opção A</div>
+      <div class="option-name">Slate + Teal</div>
+      <div class="hero-mock">
+        <div class="badge"><span class="dot"></span> Disponível para projetos</div>
+        <div class="eyebrow">Desenvolvedor Web · Campinas</div>
+        <div class="title">Sites que<br/><em>iluminam</em><br/>seu negócio.</div>
+        <div class="desc">Crio sites e sistemas para clínicas, consultórios e pequenos negócios.</div>
+        <div class="actions">
+          <a class="btn">💬 Orçamento</a>
+          <a class="btn-ghost">Ver portfólio →</a>
+        </div>
+      </div>
+      <div class="cards-row">
+        <div class="mini-card">
+          <div class="card-num">4+</div>
+          <div class="card-txt">Anos de experiência</div>
+        </div>
+        <div class="mini-card">
+          <div class="card-num">⚡</div>
+          <div class="card-txt">Entrega em 1–3 semanas</div>
+        </div>
+        <div class="mini-card">
+          <div class="card-num">🏥</div>
+          <div class="card-txt">Case: Hospital PUC</div>
+        </div>
+      </div>
+      <div class="swatches-wrap">
+        <div class="swatches">
+          <div class="swatch" style="background:#0C1A29;"><span class="swatch-label">#0C1A29</span></div>
+          <div class="swatch" style="background:#0D9488;"><span class="swatch-label">#0D9488</span></div>
+          <div class="swatch" style="background:#2DD4BF;"><span class="swatch-label">#2DD4BF</span></div>
+          <div class="swatch" style="background:#F0F9FF;"><span class="swatch-label">#F0F9FF</span></div>
+          <div class="swatch" style="background:#E2E8F0;"><span class="swatch-label">#E2E8F0</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPÇÃO B -->
+    <div class="option opt-b">
+      <div class="option-label">Opção B</div>
+      <div class="option-name">Carvão + Violeta</div>
+      <div class="hero-mock">
+        <div class="badge"><span class="dot"></span> Disponível para projetos</div>
+        <div class="eyebrow">Desenvolvedor Web · Campinas</div>
+        <div class="title">Sites que<br/><em>iluminam</em><br/>seu negócio.</div>
+        <div class="desc">Crio sites e sistemas para clínicas, consultórios e pequenos negócios.</div>
+        <div class="actions">
+          <a class="btn">💬 Orçamento</a>
+          <a class="btn-ghost">Ver portfólio →</a>
+        </div>
+      </div>
+      <div class="cards-row">
+        <div class="mini-card">
+          <div class="card-num">4+</div>
+          <div class="card-txt">Anos de experiência</div>
+        </div>
+        <div class="mini-card">
+          <div class="card-num">⚡</div>
+          <div class="card-txt">Entrega em 1–3 semanas</div>
+        </div>
+        <div class="mini-card">
+          <div class="card-num">🏥</div>
+          <div class="card-txt">Case: Hospital PUC</div>
+        </div>
+      </div>
+      <div class="swatches-wrap">
+        <div class="swatches">
+          <div class="swatch" style="background:#12101A;"><span class="swatch-label">#12101A</span></div>
+          <div class="swatch" style="background:#7C3AED;"><span class="swatch-label">#7C3AED</span></div>
+          <div class="swatch" style="background:#A78BFA;"><span class="swatch-label">#A78BFA</span></div>
+          <div class="swatch" style="background:#FAF9FF;"><span class="swatch-label">#FAF9FF</span></div>
+          <div class="swatch" style="background:#EDE9FE;"><span class="swatch-label">#EDE9FE</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPÇÃO C -->
+    <div class="option opt-c">
+      <div class="option-label">Opção C</div>
+      <div class="option-name">Escuro + Terracota</div>
+      <div class="hero-mock">
+        <div class="badge"><span class="dot"></span> Disponível para projetos</div>
+        <div class="eyebrow">Desenvolvedor Web · Campinas</div>
+        <div class="title">Sites que<br/><em>iluminam</em><br/>seu negócio.</div>
+        <div class="desc">Crio sites e sistemas para clínicas, consultórios e pequenos negócios.</div>
+        <div class="actions">
+          <a class="btn">💬 Orçamento</a>
+          <a class="btn-ghost">Ver portfólio →</a>
+        </div>
+      </div>
+      <div class="cards-row">
+        <div class="mini-card">
+          <div class="card-num">4+</div>
+          <div class="card-txt">Anos de experiência</div>
+        </div>
+        <div class="mini-card">
+          <div class="card-num">⚡</div>
+          <div class="card-txt">Entrega em 1–3 semanas</div>
+        </div>
+        <div class="mini-card">
+          <div class="card-num">🏥</div>
+          <div class="card-txt">Case: Hospital PUC</div>
+        </div>
+      </div>
+      <div class="swatches-wrap">
+        <div class="swatches">
+          <div class="swatch" style="background:#1A110D;"><span class="swatch-label">#1A110D</span></div>
+          <div class="swatch" style="background:#EA580C;"><span class="swatch-label">#EA580C</span></div>
+          <div class="swatch" style="background:#FB923C;"><span class="swatch-label">#FB923C</span></div>
+          <div class="swatch" style="background:#FFF7F3;"><span class="swatch-label">#FFF7F3</span></div>
+          <div class="swatch" style="background:#FFEDD5;"><span class="swatch-label">#FFEDD5</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ATUAL pra referência -->
+  <div class="section-title-row" style="margin-top: 48px;">
+    <h2>Atual (referência)</h2>
+    <hr/>
+  </div>
+  <div style="max-width: 400px;">
+    <div class="option opt-current">
+      <div class="option-label">Atual</div>
+      <div class="option-name">Navy + Dourado</div>
+      <div class="hero-mock">
+        <div class="badge"><span class="dot"></span> Disponível para projetos</div>
+        <div class="eyebrow">Desenvolvedor Web · Campinas</div>
+        <div class="title">Sites que<br/><em>iluminam</em><br/>seu negócio.</div>
+        <div class="desc">Crio sites e sistemas para clínicas, consultórios e pequenos negócios.</div>
+        <div class="actions">
+          <a class="btn">💬 Orçamento</a>
+          <a class="btn-ghost">Ver portfólio →</a>
+        </div>
+      </div>
+      <div class="cards-row">
+        <div class="mini-card">
+          <div class="card-num">4+</div>
+          <div class="card-txt">Anos de experiência</div>
+        </div>
+        <div class="mini-card">
+          <div class="card-num">⚡</div>
+          <div class="card-txt">Entrega em 1–3 semanas</div>
+        </div>
+        <div class="mini-card">
+          <div class="card-num">🏥</div>
+          <div class="card-txt">Case: Hospital PUC</div>
+        </div>
+      </div>
+      <div class="swatches-wrap">
+        <div class="swatches">
+          <div class="swatch" style="background:#1A2744;"><span class="swatch-label">#1A2744</span></div>
+          <div class="swatch" style="background:#C9993A;"><span class="swatch-label">#C9993A</span></div>
+          <div class="swatch" style="background:#E8B84B;"><span class="swatch-label">#E8B84B</span></div>
+          <div class="swatch" style="background:#F7F6F2;"><span class="swatch-label">#F7F6F2</span></div>
+          <div class="swatch" style="background:#E5E3DC;"><span class="swatch-label">#E5E3DC</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabela descritiva -->
+  <div class="note">
+    <h3>Qual escolher?</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Opção</th>
+          <th>Personalidade</th>
+          <th>Funciona bem para</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="dot-a"></span>A — Slate + Teal</td>
+          <td>Moderno, confiável, saúde/tech</td>
+          <td>Clínicas, consultórios, sistemas</td>
+        </tr>
+        <tr>
+          <td><span class="dot-b"></span>B — Carvão + Violeta</td>
+          <td>Premium, criativo, sofisticado</td>
+          <td>Agências, startups, profissionais liberais</td>
+        </tr>
+        <tr>
+          <td><span class="dot-c"></span>C — Escuro + Terracota</td>
+          <td>Quente, humano, acolhedor</td>
+          <td>Igrejas, pequenos negócios, profissionais</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px; font-size:13px; color:#888; line-height:1.6;">
+      Para o seu público-alvo (clínicas, igrejas, pequenos negócios em Campinas), a <strong>Opção A</strong> transmite mais confiança e profissionalismo na área da saúde. A <strong>Opção C</strong> é mais acolhedora e humana. Me diga qual você quer e aplico no portfólio!
+    </p>
+  </div>
+
+</body>
+</html>
