@@ -1,118 +1,343 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Estilização Site -->
-  <link rel="icon" href="/img/favicon.ico" type="image/png">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/about-me.css">
-  <link rel="stylesheet" href="css/projects.css">
-  <link rel="stylesheet" href="css/about-you.css">
-
-  <!-- Linking Font League Spartan -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-  <title>brunomarcosluz</title>
-
-  <script>
-    window.Userback = window.Userback || {};
-    Userback.access_token = '38428|76041|26IUB4Hohemdu2gJviPd5erYD';
-    (function (d) {
-      var s = d.createElement('script'); s.async = true;
-      s.src = 'https://static.userback.io/widget/v1.js';
-      (d.head || d.body).appendChild(s);
-    })(document);
-  </script>
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bruno Luz — Desenvolvimento Web · Campinas</title>
+  <meta name="description" content="Desenvolvedor web em Campinas. Crio sites e sistemas para clínicas, consultórios e pequenos negócios. Entrega em 1–3 semanas."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-
 <body>
-  <div class="g-header">
-    <h1 id="marca"><a href="#">bml.</a></h1>
-    <nav id="navbar">
-      <ul>
-        <li><a href="#about-me-sec">about me.</a></li>
-        <li><a href="#projects">projects.</a></li>
-      </ul>
-    </nav>
-  </div>
 
-  <section>
-    <div class="container-home">
-      <div class="g-home">
-        <h1 id="home-title">The choice is yours.</h1>
-        <div class="g-pills">
-          <a href="#about-you" id="red-pill"><img src="img/red-pill.svg" alt="red-pill"></a>
-          <a href="#about-me-sec" id="blue-pill"><img src="img/blue-pill.svg" alt="blue-pill"></a>
+  <!-- ════════════════════════════════
+       NAVEGAÇÃO
+  ════════════════════════════════ -->
+  <nav id="main-nav">
+    <a href="#hero" class="nav-logo">Bruno <span>Luz</span></a>
+    <ul class="nav-links">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#case">Portfólio</a></li>
+      <li><a href="#processo">Como funciona</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato" class="nav-cta">Solicitar orçamento</a></li>
+    </ul>
+  </nav>
+
+  <!-- ════════════════════════════════
+       HERO
+  ════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="avail-badge">
+          <span class="avail-dot"></span>
+          Disponível para novos projetos em Campinas
+        </div>
+        <div class="hero-eyebrow">Desenvolvedor Web · Campinas, SP</div>
+        <h1 class="hero-title">
+          Sites que<br/>
+          <em>iluminam</em><br/>
+          seu negócio.
+        </h1>
+        <p class="hero-desc">
+          Crio sites e sistemas sob medida para clínicas, consultórios e pequenos negócios.
+          Entrega rápida, código limpo e presença digital que atrai pacientes de verdade.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/5519996234059?text=Olá%2C%20Bruno!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20solicitar%20um%20orçamento." class="btn-primary" target="_blank">
+            💬 Solicitar orçamento
+          </a>
+          <a href="#case" class="btn-secondary">Ver portfólio →</a>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <div class="stat-card">
+          <div class="stat-num">4+</div>
+          <div class="stat-label">
+            <strong>Anos de experiência</strong>
+            Desenvolvimento web & sistemas
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">⚡</div>
+          <div class="stat-label">
+            <strong>Entrega em 1–3 semanas</strong>
+            Do briefing ao site no ar
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">🏥</div>
+          <div class="stat-label">
+            <strong>Case: Hospital PUC</strong>
+            Sistemas em produção real
+          </div>
         </div>
       </div>
     </div>
-
   </section>
 
-  <section id="about-me-sec">
-    <div class="container-about">
-      <div class="g-about">
-        <h1 id="about-title">Who am I?</h1>
-        <p id="about-text">
-          I’m Bruno Marcos Luz, a brazilian software developer living in Campinas - São Paulo. <br> I believe
-          whitout love nothing you do is relevant.
-        </p>
-        <img src="img/brazil-flag.svg" alt="brazil-flag">
+  <!-- ════════════════════════════════
+       SERVIÇOS
+  ════════════════════════════════ -->
+  <section id="servicos">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">O que eu faço</div>
+        <h2 class="section-title">Soluções simples,<br/>resultados <em>reais</em></h2>
+        <p class="section-desc">Cada projeto é desenvolvido do zero, no prazo combinado, sem surpresas no orçamento.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container-projects">
-      <div class="g-projects">
-        <h1 id="project-title">Highlighted Projects</h1>
-        <div class="g-proj-row">
-          <a href="https://github.com/brunomarcosluz/Jornada-Ninja-Web" target="_blank">
-            <img src="img/projects-img/project-banner.png" alt="Jornada Ninja Web">
-          </a>
-
-          <a href="https://www.youtube.com/@brunomarcosluz/featured" alt="brunomarcosluz - Youtube" target="_blank">
-            <img src="/img/projects-img/project-banner-bml.png">
-          </a>
-
-          <a href="" alt="In Progress">
-            <img src="/img/projects-img/project-banner-progress.png" alt="Project in progress">
-          </a>
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">🖥️</div>
+          <div class="service-name">Landing Page</div>
+          <div class="service-desc">Página única e objetiva para apresentar seu consultório ou serviço e converter visitantes em contatos.</div>
+          <ul class="service-features">
+            <li>Design responsivo (mobile e desktop)</li>
+            <li>Formulário de contato / WhatsApp</li>
+            <li>Google Maps integrado</li>
+            <li>SEO básico configurado</li>
+          </ul>
+          <div class="service-price">a partir de <strong>R$ 800</strong></div>
         </div>
-        <a href="https://github.com/brunomarcosluz" target="_blank" id="github-icon"><img src="/img/github.svg"
-            alt="Check more projects on my Github"></a>
+        <div class="service-card featured reveal reveal-delay-2">
+          <div class="badge-popular">Mais pedido</div>
+          <div class="service-icon">🏢</div>
+          <div class="service-name">Site Institucional</div>
+          <div class="service-desc">Site completo com múltiplas páginas, blog, galeria e tudo que um negócio profissional precisa.</div>
+          <ul class="service-features">
+            <li>Até 5 páginas completas</li>
+            <li>Painel para editar conteúdo</li>
+            <li>Integração com agendamento</li>
+            <li>SSL, performance e segurança</li>
+            <li>1 mês de suporte incluso</li>
+          </ul>
+          <div class="service-price">a partir de <strong>R$ 1.500</strong></div>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon">⚙️</div>
+          <div class="service-name">Sistema Web</div>
+          <div class="service-desc">Sistemas personalizados: controle de pacientes, agendamento online, relatórios e automações.</div>
+          <ul class="service-features">
+            <li>Autenticação e controle de acesso</li>
+            <li>Banco de dados MySQL / Oracle</li>
+            <li>Automações com n8n</li>
+            <li>Hospedagem em servidor Linux</li>
+          </ul>
+          <div class="service-price">a partir de <strong>R$ 2.000</strong></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="about-you">
-    <div class="container-about-you">
-      <div class="g-about-you">
-        <h1 id="about-you-title">You choose the truth.</h1>
-        <p>
-          The truth is that you are a very good person, you aren't <br> perfect, but I believe you're trying your best.
-          :)
-        </p>
-        <p>
-
-          wake up.. and..
-        <p id="white-rabbit"> follow the white rabbit. </p>
-
-        </p>
-        <a href="https://www.linkedin.com/in/bruno-luz-comunicacao-desenvolvimento-tecnologia/" target="_blank"
-          alt="Linkedin" id="rabbit"><img src="img/rabbit.svg" alt="white-rabbit"></a>
+  <!-- ════════════════════════════════
+       CASE – HOSPITAL PUC-CAMPINAS
+  ════════════════════════════════ -->
+  <section id="case">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Portfólio</div>
+        <h2 class="section-title">Trabalhos com<br/><em>impacto real</em></h2>
+      </div>
+      <div class="case-block reveal">
+        <div class="case-content">
+          <span class="case-tag">Case Principal</span>
+          <h3 class="case-title">
+            Sistema interno para<br/>
+            <em>Hospital PUC-Campinas</em>
+          </h3>
+          <p class="case-desc">
+            Como analista de sistemas do Hospital PUC-Campinas, desenvolvi e mantenho ferramentas
+            internas que otimizam processos administrativos e operacionais da instituição.
+            Trabalho com PHP, MySQL, Oracle e servidores Linux em um ambiente de alta demanda e criticidade.
+          </p>
+          <div class="case-metrics">
+            <div class="metric">
+              <div class="metric-num">PHP</div>
+              <div class="metric-label">Stack principal de desenvolvimento</div>
+            </div>
+            <div class="metric">
+              <div class="metric-num">Oracle</div>
+              <div class="metric-label">Banco de dados institucional</div>
+            </div>
+            <div class="metric">
+              <div class="metric-num">Linux</div>
+              <div class="metric-label">Servidores Apache em produção</div>
+            </div>
+            <div class="metric">
+              <div class="metric-num">n8n</div>
+              <div class="metric-label">Automação de processos internos</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-visual">
+          <div class="mockup-window">
+            <div class="mockup-bar">
+              <div class="mockup-dot" style="background:#ff5f57;"></div>
+              <div class="mockup-dot" style="background:#febc2e;"></div>
+              <div class="mockup-dot" style="background:#28c840;"></div>
+              <div style="flex:1; margin-left:8px; height:8px; background:rgba(255,255,255,0.08); border-radius:4px;"></div>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-row gold"></div>
+              <div class="mockup-row short"></div>
+              <div style="height:16px;"></div>
+              <div class="mockup-row highlight"></div>
+              <div class="mockup-row"></div>
+              <div class="mockup-row short"></div>
+              <div class="mockup-grid">
+                <div class="mockup-cell active">📋</div>
+                <div class="mockup-cell">📊</div>
+                <div class="mockup-cell">👤</div>
+                <div class="mockup-cell">🏥</div>
+                <div class="mockup-cell active">⚙️</div>
+                <div class="mockup-cell">📅</div>
+              </div>
+              <div style="height:16px;"></div>
+              <div class="mockup-row"></div>
+              <div class="mockup-row short"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ════════════════════════════════
+       COMO FUNCIONA
+  ════════════════════════════════ -->
+  <section id="processo">
+    <div class="section-inner">
+      <div class="section-header reveal" style="text-align:center; display:flex; flex-direction:column; align-items:center;">
+        <div class="section-eyebrow">Processo</div>
+        <h2 class="section-title">Como funciona<br/><em>na prática</em></h2>
+        <p class="section-desc" style="text-align:center;">Do primeiro contato ao site no ar em até 3 semanas — sem complicação.</p>
+      </div>
+      <div class="steps-wrapper">
+        <div class="step reveal reveal-delay-1">
+          <div class="step-num">1</div>
+          <div class="step-emoji">💬</div>
+          <div class="step-name">Briefing</div>
+          <div class="step-desc">Conversa rápida para entender o seu negócio, o que você precisa e o que você espera do site.</div>
+        </div>
+        <div class="step reveal reveal-delay-2">
+          <div class="step-num">2</div>
+          <div class="step-emoji">🎨</div>
+          <div class="step-name">Design & Proposta</div>
+          <div class="step-desc">Apresento o layout e o orçamento. Sem surpresa — o que for combinado, é o que será entregue.</div>
+        </div>
+        <div class="step reveal reveal-delay-3">
+          <div class="step-num">3</div>
+          <div class="step-emoji">⚡</div>
+          <div class="step-name">Desenvolvimento</div>
+          <div class="step-desc">Codifico o site com atualizações frequentes para você acompanhar o progresso em tempo real.</div>
+        </div>
+        <div class="step reveal reveal-delay-4">
+          <div class="step-num">4</div>
+          <div class="step-emoji">🚀</div>
+          <div class="step-name">Entrega & Suporte</div>
+          <div class="step-desc">Site no ar com domínio configurado e 30 dias de suporte para ajustes e dúvidas.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ════════════════════════════════
+       SOBRE
+  ════════════════════════════════ -->
+  <section id="sobre">
+    <div class="section-inner">
+      <div class="sobre-grid">
+        <div class="sobre-photo-wrap reveal">
+          <div class="sobre-photo">
+            <img src="img/foto-bruno.jpg" alt="Bruno Luz — Desenvolvedor Web"/>
+          </div>
+          <div class="sobre-photo-deco">
+            <div class="deco-num">24</div>
+            <div class="deco-label">anos de idade</div>
+          </div>
+        </div>
+        <div class="sobre-content reveal reveal-delay-2">
+          <div class="section-eyebrow">Sobre mim</div>
+          <h2 class="section-title" style="margin-bottom:24px;">Bruno <em>Luz</em></h2>
+          <p class="sobre-intro">
+            Sou desenvolvedor web <strong>mid-level</strong> baseado em Campinas, SP — e o sobrenome não é coincidência.
+          </p>
+          <p class="sobre-text">
+            Trabalho como analista de sistemas no Hospital PUC-Campinas, onde desenvolvo e mantenho sistemas em ambiente de alta criticidade. Essa experiência me ensinou que tecnologia precisa ser confiável, simples de usar e — acima de tudo — resolver o problema de quem vai usá-la de verdade.
+          </p>
+          <p class="sobre-text">
+            Fora do trabalho, sou pastor de jovens na Igreja Metodista. Isso moldou minha forma de encarar projetos: ouço antes de agir, me importo com quem está do outro lado e entrego aquilo que prometi.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Oracle</span>
+            <span class="tech-tag">n8n</span>
+            <span class="tech-tag">Apache</span>
+            <span class="tech-tag">Linux/Ubuntu</span>
+            <span class="tech-tag">HTML/CSS/JS</span>
+          </div>
+          <div class="sobre-values">
+            <div class="value-item">
+              <div class="value-icon">⚡</div>
+              <div class="value-text"><strong>Entrega rápida:</strong> projetos em 1 a 3 semanas, sem enrolação.</div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🤝</div>
+              <div class="value-text"><strong>Comunicação direta:</strong> você sabe o que está acontecendo em cada etapa.</div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">✦</div>
+              <div class="value-text"><strong>Preço justo:</strong> cobro pelo valor que entrego, sem cobrar pelo que você não precisa.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       CONTATO
+  ════════════════════════════════ -->
+  <section id="contato">
+    <div class="contato-inner">
+      <div class="contato-eyebrow reveal">Vamos conversar</div>
+      <h2 class="contato-title reveal">Seu negócio merece<br/><em>brilhar</em> online.</h2>
+      <p class="contato-desc reveal">
+        Me mande uma mensagem no WhatsApp ou por e-mail. Respondo em até 24 horas com uma proposta personalizada para o seu caso.
+      </p>
+      <div class="contato-actions reveal">
+        <a href="https://wa.me/5519996234059?text=Olá%2C%20Bruno!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20solicitar%20um%20orçamento." class="btn-whatsapp" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="mailto:brunomarcosluz@gmail.com" class="btn-email">
+          ✉️ brunomarcosluz@gmail.com
+        </a>
+      </div>
+      <div class="guarantees reveal">
+        <div class="guarantee">Resposta em até 24h</div>
+        <div class="guarantee">Orçamento sem compromisso</div>
+        <div class="guarantee">Contrato antes de começar</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+  <footer>
+    <div class="footer-logo">Bruno <span>Luz</span></div>
+    <div class="footer-text">© 2026 · Desenvolvimento Web · Campinas, SP</div>
+    <div class="footer-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#case">Portfólio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="mailto:brunomarcosluz@gmail.com">E-mail</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
-
 </html>

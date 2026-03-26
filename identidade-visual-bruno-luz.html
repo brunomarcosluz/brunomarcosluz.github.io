@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Identidade Visual — Bruno Luz Dev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #1A2744;
+      --gold:   #C9993A;
+      --gold-light: #E8B84B;
+      --white:  #FFFFFF;
+      --offwhite: #F7F6F2;
+      --gray:   #6B7280;
+      --light:  #EAE8E0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F0EEE8;
+      color: var(--navy);
+      padding: 40px 24px;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding: 16px 0 8px;
+    }
+    .header .label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      opacity: 0.5;
+    }
+
+    /* CARD BASE */
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 2px 12px rgba(26,39,68,0.07);
+    }
+    .card-title {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+
+    /* ——— LOGO ——— */
+    .logo-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .logo-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo-mark {
+      position: relative;
+      width: 72px;
+      height: 72px;
+    }
+    .logo-mark svg {
+      width: 72px;
+      height: 72px;
+    }
+
+    .logo-wordmark {
+      text-align: center;
+    }
+    .logo-wordmark .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+    .logo-wordmark .name span {
+      color: var(--gold);
+    }
+    .logo-wordmark .sub {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 4px;
+    }
+
+    .logo-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: var(--gray);
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* Logo on dark bg */
+    .logo-dark {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 28px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-dark .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+    .logo-dark .name span {
+      color: var(--gold-light);
+    }
+    .logo-dark .sub {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-top: 4px;
+    }
+
+    /* Logos row */
+    .logos-row {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ——— CORES ——— */
+    .colors-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .swatch-box {
+      height: 80px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.07);
+    }
+    .swatch-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .swatch-hex {
+      font-size: 11px;
+      color: var(--gray);
+      font-family: monospace;
+    }
+    .swatch-desc {
+      font-size: 10px;
+      color: var(--gray);
+      line-height: 1.4;
+    }
+
+    /* ——— TIPOGRAFIA ——— */
+    .typo-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .typo-item {
+      border-bottom: 1px solid var(--light);
+      padding-bottom: 20px;
+    }
+    .typo-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .typo-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+    .typo-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+    .typo-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--gray);
+      letter-spacing: 1px;
+    }
+    .typo-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.7;
+      max-width: 520px;
+    }
+    .typo-accent {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ——— PERSONALIDADE ——— */
+    .personality-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .trait {
+      background: var(--offwhite);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .trait-icon {
+      font-size: 28px;
+    }
+    .trait-name {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--navy);
+    }
+    .trait-desc {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* ——— PREVIEW SITE ——— */
+    .site-preview {
+      background: var(--navy);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .site-nav {
+      padding: 18px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .site-nav .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: white;
+      font-weight: 700;
+    }
+    .site-nav .brand span { color: var(--gold-light); }
+    .site-nav .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+    .site-nav .nav-links a {
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .site-hero {
+      padding: 56px 32px 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 32px;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero-title em {
+      color: var(--gold-light);
+      font-style: normal;
+    }
+    .hero-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      max-width: 400px;
+      margin-bottom: 28px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+    .hero-badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 20px 24px;
+      text-align: center;
+      min-width: 160px;
+    }
+    .hero-badge .badge-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .hero-badge .badge-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 6px;
+      letter-spacing: 1px;
+    }
+
+    /* ——— APLICAÇÕES ——— */
+    .apps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .app-card {
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .app-card.dark { background: var(--navy); }
+    .app-card.light { background: var(--offwhite); border: 1px solid var(--light); }
+    .app-card.gold-bg { background: var(--gold); }
+    .app-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .app-card.dark .app-label { color: rgba(255,255,255,0.4); }
+    .app-card.light .app-label { color: var(--gray); }
+    .app-card.gold-bg .app-label { color: rgba(255,255,255,0.7); }
+    .app-whatsapp {
+      background: #1A2744;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .wa-bubble {
+      background: rgba(255,255,255,0.1);
+      border-radius: 0 12px 12px 12px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: white;
+      line-height: 1.5;
+      max-width: 280px;
+    }
+    .wa-bubble strong { color: var(--gold-light); }
+    .wa-time {
+      font-size: 10px;
+      color: rgba(255,255,255,0.35);
+      text-align: right;
+      margin-top: 6px;
+    }
+
+    /* ——— FOOTER ——— */
+    .footer-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--gray);
+      padding-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="label">Identidade Visual · Proposta</div>
+    <h1>Bruno Marcos Luz de Macedo — Desenvolvedor Web · Campinas, SP</h1>
+  </div>
+
+  <!-- CONCEITO -->
+  <div class="card">
+    <div class="card-title">Conceito Central</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center;">
+      <div>
+        <div style="font-family:'Playfair Display',serif; font-size:38px; color:var(--navy); font-weight:700; line-height:1.1; margin-bottom:16px;">
+          Código que<br/><span style="color:var(--gold);">ilumina</span><br/>negócios.
+        </div>
+        <p style="font-size:14px; color:var(--gray); line-height:1.7;">
+          Seu sobrenome <strong style="color:var(--navy);">Luz</strong> é o ativo mais valioso da sua marca.
+          Ele conecta três pilares da sua identidade: a <em>fé</em> que te guia, a <em>ambição</em> que te move
+          e o <em>trabalho técnico</em> que entrega clareza aos seus clientes. Uma marca difícil de esquecer.
+        </p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div style="background:var(--offwhite); border-radius:10px; padding:16px 20px; border-left:3px solid var(--gold);">
+          <div style="font-size:11px; color:var(--gold); text-transform:uppercase; letter-spacing:2px; margin-bottom:4px;">Luz = Fé</div>
+          <div style="font-size:13px; color:var(--navy);">Pastor metodista — a luz como símbolo central do evangelismo</div>
+        </div>
+        <div style="background:var(--offwhite); border-radius:10px; padding:16px 20px; border-left:3px solid var(--navy);">
+          <div style="font-size:11px; color:var(--navy); text-transform:uppercase; letter-spacing:2px; margin-bottom:4px;">Luz = Clareza</div>
+          <div style="font-size:13px; color:var(--navy);">Você ilumina o negócio do cliente — resolve o que está no escuro</div>
+        </div>
+        <div style="background:var(--offwhite); border-radius:10px; padding:16px 20px; border-left:3px solid #374151;">
+          <div style="font-size:11px; color:#374151; text-transform:uppercase; letter-spacing:2px; margin-bottom:4px;">Luz = Destaque</div>
+          <div style="font-size:13px; color:var(--navy);">Nome memorável que se destaca entre devs genéricos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGO -->
+  <div class="card">
+    <div class="card-title">Logo & Marca</div>
+    <div class="logo-section">
+      <div class="logos-row">
+        <!-- Logo clara -->
+        <div style="background:var(--offwhite); border-radius:12px; padding:32px 48px; display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <!-- Ícone raio/luz simplificado -->
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="17" stroke="#C9993A" stroke-width="1.5"/>
+              <path d="M20 7L12 20h7l-3 9 12-14h-8l3-8z" fill="#C9993A"/>
+            </svg>
+            <div>
+              <div style="font-family:'Playfair Display',serif; font-size:26px; font-weight:700; color:#1A2744; line-height:1;">
+                Bruno <span style="color:#C9993A;">Luz</span>
+              </div>
+              <div style="font-size:9px; letter-spacing:3.5px; text-transform:uppercase; color:#9CA3AF;">Desenvolvimento Web</div>
+            </div>
+          </div>
+        </div>
+        <!-- Logo escura -->
+        <div style="background:#1A2744; border-radius:12px; padding:32px 48px; display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="17" stroke="#E8B84B" stroke-width="1.5"/>
+              <path d="M20 7L12 20h7l-3 9 12-14h-8l3-8z" fill="#E8B84B"/>
+            </svg>
+            <div>
+              <div style="font-family:'Playfair Display',serif; font-size:26px; font-weight:700; color:white; line-height:1;">
+                Bruno <span style="color:#E8B84B;">Luz</span>
+              </div>
+              <div style="font-size:9px; letter-spacing:3.5px; text-transform:uppercase; color:rgba(255,255,255,0.4);">Desenvolvimento Web</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo-tagline">"Código que ilumina negócios." &nbsp;·&nbsp; brunoLuz.com.br</div>
+    </div>
+  </div>
+
+  <!-- CORES -->
+  <div class="card">
+    <div class="card-title">Paleta de Cores</div>
+    <div class="colors-grid">
+      <div class="swatch">
+        <div class="swatch-box" style="background:#1A2744;"></div>
+        <div class="swatch-name">Navy Profundo</div>
+        <div class="swatch-hex">#1A2744</div>
+        <div class="swatch-desc">Confiança, seriedade, profundidade</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#C9993A;"></div>
+        <div class="swatch-name">Ouro Luz</div>
+        <div class="swatch-hex">#C9993A</div>
+        <div class="swatch-desc">Ambição, fé, destaque, calor humano</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#E8B84B;"></div>
+        <div class="swatch-name">Âmbar Claro</div>
+        <div class="swatch-hex">#E8B84B</div>
+        <div class="swatch-desc">Versão clara do ouro, usar em fundo escuro</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#F7F6F2; border:1px solid #E5E3DC;"></div>
+        <div class="swatch-name">Off-white</div>
+        <div class="swatch-hex">#F7F6F2</div>
+        <div class="swatch-desc">Fundo principal, leveza, respiro</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#374151;"></div>
+        <div class="swatch-name">Grafite</div>
+        <div class="swatch-hex">#374151</div>
+        <div class="swatch-desc">Textos secundários, ícones, bordas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIPOGRAFIA -->
+  <div class="card">
+    <div class="card-title">Tipografia</div>
+    <div class="typo-grid">
+      <div class="typo-item">
+        <div class="typo-label">Títulos — Playfair Display</div>
+        <div class="typo-heading">Bruno Luz Dev</div>
+      </div>
+      <div class="typo-item">
+        <div class="typo-label">Subtítulos — Inter Light</div>
+        <div class="typo-sub">Desenvolvimento Web · Campinas, SP</div>
+      </div>
+      <div class="typo-item">
+        <div class="typo-label">Corpo — Inter Regular</div>
+        <div class="typo-body">Crio sites e sistemas para clínicas, consultórios e pequenos negócios em Campinas. Entrega rápida, preço justo e suporte de verdade.</div>
+      </div>
+      <div class="typo-item">
+        <div class="typo-label">Destaque / Label — Inter Semibold</div>
+        <div class="typo-accent">Desenvolvimento · PHP · MySQL · n8n</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSONALIDADE -->
+  <div class="card">
+    <div class="card-title">Personalidade da Marca</div>
+    <div class="personality-grid">
+      <div class="trait">
+        <div class="trait-icon">⚡</div>
+        <div class="trait-name">Ambicioso</div>
+        <div class="trait-desc">Tom direto, confiante. Você sabe o que faz e comunica isso sem hesitação.</div>
+      </div>
+      <div class="trait">
+        <div class="trait-icon">🤝</div>
+        <div class="trait-name">Humano & Próximo</div>
+        <div class="trait-desc">A espiritualidade traz empatia. Você é o dev que ouve antes de codar.</div>
+      </div>
+      <div class="trait">
+        <div class="trait-icon">✨</div>
+        <div class="trait-name">Clareza & Luz</div>
+        <div class="trait-desc">Resolve o problema do cliente de forma simples. Sem complicação técnica desnecessária.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREVIEW DO SITE -->
+  <div class="card">
+    <div class="card-title">Preview — Hero do Site Portfólio</div>
+    <div class="site-preview">
+      <div class="site-nav">
+        <div class="brand">Bruno <span>Luz</span></div>
+        <div class="nav-links">
+          <a href="#">Serviços</a>
+          <a href="#">Portfólio</a>
+          <a href="#">Contato</a>
+        </div>
+      </div>
+      <div class="site-hero">
+        <div>
+          <div class="hero-eyebrow">Desenvolvedor Web · Campinas, SP</div>
+          <div class="hero-title">
+            Sites que<br/><em>iluminam</em><br/>seu negócio.
+          </div>
+          <div class="hero-desc">
+            Criação de sites e sistemas para clínicas, consultórios e pequenos negócios. Entrega em até 3 semanas.
+          </div>
+          <a class="hero-cta" href="#">Solicitar orçamento →</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div class="hero-badge">
+            <div class="badge-num">+3</div>
+            <div class="badge-label">Anos de<br/>experiência</div>
+          </div>
+          <div class="hero-badge">
+            <div class="badge-num">⚡</div>
+            <div class="badge-label">Entrega em<br/>1–3 semanas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APLICAÇÕES RÁPIDAS -->
+  <div class="card">
+    <div class="card-title">Aplicações — Tom de Comunicação</div>
+    <div class="apps-grid">
+      <div>
+        <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--gray); margin-bottom:12px;">Mensagem de abordagem (WhatsApp)</div>
+        <div class="app-whatsapp">
+          <div class="wa-bubble">
+            Olá, Dr. Paulo! Me chamo <strong>Bruno Luz</strong>, sou desenvolvedor web aqui em Campinas.<br/><br/>
+            Vi que o consultório ainda não tem um site — poderia te ajudar a criar uma presença online profissional em até 2 semanas. Posso compartilhar alguns exemplos?
+          </div>
+          <div class="wa-time">09:34 ✓✓</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--gray); margin-bottom:12px;">Bio do LinkedIn</div>
+        <div style="background:var(--offwhite); border-radius:12px; padding:20px; border:1px solid var(--light);">
+          <p style="font-size:13px; color:var(--navy); line-height:1.7;">
+            Desenvolvedor web mid-level especializado em <strong>sites e sistemas para saúde e pequenos negócios</strong> em Campinas.<br/><br/>
+            Trabalho como analista de sistemas no Hospital PUC-Campinas e atendo clínicas, consultórios e profissionais liberais via freela.<br/><br/>
+            Stack: <strong>PHP · MySQL · n8n · Linux</strong><br/>
+            Entrega rápida · Preço justo · Resultado real.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Identidade Visual — Bruno Luz Dev · 2026 · Gerado como guia de marca
+  </div>
+
+</div>
+</body>
+</html>
