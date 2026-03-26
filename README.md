@@ -2,7 +2,7 @@
 
 Site portfólio pessoal de Bruno Marcos Luz de Macedo, desenvolvedor web mid-level baseado em Campinas, SP.
 
-🌐 **[brunoluz.com.br](https://brunoluz.com.br)** *(em breve)*
+🌐 **[brunomarcosluz.com.br](https://brunomarcosluz.com.br)** *(em breve)*
 
 ---
 
