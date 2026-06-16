@@ -309,10 +309,10 @@
   <main class="pt-[100px]">
     
     <!-- Hero Section -->
-    <section class="min-h-screen px-6 md:px-container-margin pt-16 md:pt-section-gap pb-16 md:pb-section-gap relative flex items-center">
+    <section class="hero-section min-h-screen px-6 md:px-container-margin pt-16 md:pt-section-gap pb-16 md:pb-section-gap relative flex items-center">
       <div class="grid grid-cols-4 md:grid-cols-12 gap-gutter w-full">
         <div class="col-span-4 md:col-span-8 md:col-start-1 flex flex-col justify-center z-10">
-          <h1 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-white mb-stack-lg leading-none">
+          <h1 class="hero-main-title font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-white mb-stack-lg leading-none">
             <span data-i18n="hero.title1">Sistemas Críticos.</span><br>
             <span class="text-surface-variant" data-i18n="hero.title2">Design de</span><br>
             <span data-i18n="hero.title3">Autoridade.</span>
@@ -320,7 +320,7 @@
           <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg" data-i18n="hero.subtitle">
             Transformo complexidade técnica em presença digital de alto impacto para ambientes que não permitem erro.
           </p>
-          <div class="flex flex-wrap gap-stack-md">
+          <div class="hero-cta-group flex flex-wrap gap-stack-md">
             <a class="bg-primary-container text-white font-label-mono-lg text-label-mono-lg uppercase px-8 py-4 hover:bg-white hover:text-black transition-colors rounded-none brutalist-shadow" href="#contato" data-i18n="hero.btn.projeto">
               Iniciar Projeto
             </a>
@@ -328,16 +328,16 @@
               Ver Cases
             </a>
           </div>
-          <div class="mt-12 md:mt-24 flex flex-wrap gap-stack-lg border-t border-[#232834] pt-stack-md">
-            <div>
+          <div class="hero-inline-stats mt-12 md:mt-24 flex flex-wrap gap-stack-lg border-t border-[#232834] pt-stack-md">
+            <div class="hero-inline-stat">
               <p class="font-label-mono-sm text-label-mono-sm text-primary uppercase" data-i18n="hero.label.experiencia">EXPERIÊNCIA</p>
               <p class="font-headline-md text-headline-md text-white"><span data-counter="4">0</span><span data-i18n="hero.stat.anos">+ Anos</span></p>
             </div>
-            <div>
+            <div class="hero-inline-stat">
               <p class="font-label-mono-sm text-label-mono-sm text-primary uppercase" data-i18n="hero.label.velocidade">VELOCIDADE</p>
               <p class="font-headline-md text-headline-md text-white" data-i18n="hero.stat.semanas">1-3 Semanas</p>
             </div>
-            <div>
+            <div class="hero-inline-stat">
               <p class="font-label-mono-sm text-label-mono-sm text-primary uppercase" data-i18n="hero.label.especialidade">ESPECIALIDADE</p>
               <p class="font-headline-md text-headline-md text-white" data-i18n="hero.stat.empresas">Hospitais, Clínicas e Pequenas empresas</p>
             </div>
@@ -452,7 +452,7 @@
     </section>
 
     <!-- Project Showcase Section (Sticky horizontal on Desktop, swipe on Mobile) -->
-    <section id="projetos" class="relative bg-surface-container-lowest md:h-[300vh]">
+    <section id="projetos" class="projects-showcase relative bg-surface-container-lowest md:h-[300vh]">
       
       <!-- Sticky Container -->
       <div class="md:sticky md:top-0 md:h-screen md:flex md:flex-col md:justify-center md:overflow-hidden py-16 md:py-0">
@@ -479,7 +479,7 @@
 
             <!-- Project 2: Hospital PUC-Campinas -->
             <div class="min-w-[85vw] md:min-w-[55vw] snap-center cinema-card group cursor-pointer" data-project-name="Hospital PUC-Campinas" data-project-url="internal" data-external="false">
-              <div class="sterile-border mb-stack-md overflow-hidden relative h-[45vh] md:h-[55vh] bg-[#0c0e12] p-8 flex flex-col justify-between font-mono text-xs text-on-surface-variant">
+              <div class="project-preview-card sterile-border mb-stack-md overflow-hidden relative h-[45vh] md:h-[55vh] bg-[#0c0e12] p-8 flex flex-col justify-between font-mono text-xs text-on-surface-variant">
                 
                 <!-- Inner Dashboard Header -->
                 <div class="flex justify-between items-center border-b border-[#232834] pb-4 mt-12">
@@ -545,7 +545,7 @@
 
             <!-- Project 5: Todetranca -->
             <div class="min-w-[85vw] md:min-w-[55vw] snap-center cinema-card group cursor-pointer" data-project-name="Todetranca" data-project-url="https://todetranca.app.br" data-external="true">
-              <div class="sterile-border mb-stack-md overflow-hidden relative h-[45vh] md:h-[55vh] bg-[#0c0e12] p-8 flex flex-col justify-between font-mono text-xs text-on-surface-variant">
+              <div class="project-preview-card sterile-border mb-stack-md overflow-hidden relative h-[45vh] md:h-[55vh] bg-[#0c0e12] p-8 flex flex-col justify-between font-mono text-xs text-on-surface-variant">
 
                 <!-- Inner Dashboard Header -->
                 <div class="flex justify-between items-center border-b border-[#232834] pb-4 mt-12">
@@ -724,23 +724,23 @@ Como pastor de jovens, entendo que por trás de cada clínica existe um sonho e 
     </section>
 
     <!-- Contact Section -->
-    <section class="px-6 md:px-container-margin py-16 md:py-section-gap" id="contato">
+    <section class="contact-section px-6 md:px-container-margin py-16 md:py-section-gap" id="contato">
       <div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
         <div class="col-span-4 md:col-span-5 flex flex-col justify-between reveal">
           <div>
-            <h2 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-white leading-none mb-stack-md">
+            <h2 class="contact-main-title font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-white leading-none mb-stack-md">
               <span data-i18n="contact.title1">Iniciar</span><br><span data-i18n="contact.title2">Sistema.</span>
             </h2>
             <p class="font-body-lg text-body-lg text-on-surface-variant mb-8" data-i18n="contact.subtitle">
               Propostas personalizadas e arquitetura de projeto enviadas em até 24h.
             </p>
           </div>
-          <div class="flex flex-col gap-6 mt-8 md:mt-0">
-            <a class="flex items-center gap-stack-md font-label-mono-lg text-label-mono-lg text-white hover:text-primary transition-colors group" href="https://wa.me/5519996234059?text=Ol%C3%A1%2C%20Bruno!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank">
+          <div class="contact-direct-links flex flex-col gap-6 mt-8 md:mt-0">
+            <a class="contact-direct-link flex items-center gap-stack-md font-label-mono-lg text-label-mono-lg text-white hover:text-primary transition-colors group" href="https://wa.me/5519996234059?text=Ol%C3%A1%2C%20Bruno!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank">
               <span class="material-symbols-outlined text-3xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
               <span data-i18n="contact.whatsapp">WhatsApp Direto</span>
             </a>
-            <a class="flex items-center gap-stack-md font-label-mono-lg text-label-mono-lg text-white hover:text-primary transition-colors group" href="mailto:brunomarcosluz@gmail.com">
+            <a class="contact-direct-link flex items-center gap-stack-md font-label-mono-lg text-label-mono-lg text-white hover:text-primary transition-colors group" href="mailto:brunomarcosluz@gmail.com">
               <span class="material-symbols-outlined text-3xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
               contato@brunoluz.dev
             </a>
@@ -776,7 +776,7 @@ Como pastor de jovens, entendo que por trás de cada clínica existe um sonho e 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width pb-12 pt-24 border-t border-outline-variant flat no shadows max-w-7xl mx-auto px-6 md:px-container-margin flex flex-col md:flex-row justify-between items-end gap-stack-lg">
+  <footer class="site-footer bg-surface-container-lowest dark:bg-surface-container-lowest full-width pb-12 pt-24 border-t border-outline-variant flat no shadows max-w-7xl mx-auto px-6 md:px-container-margin flex flex-col md:flex-row justify-between items-end gap-stack-lg">
     <div>
       <div class="font-headline-lg text-headline-lg font-bold text-primary mb-stack-md leading-none">BRUNO LUZ</div>
       <p class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-on-surface-variant" data-i18n="footer.copyright">© 2026 BRUNO LUZ. DESENVOLVIMENTO DE ALTA CRITICIDADE.</p>
@@ -803,7 +803,7 @@ Como pastor de jovens, entendo que por trás de cada clínica existe um sonho e 
     <div class="relative w-full h-[90vh] max-w-7xl bg-[#1e2024] border border-[#232834] flex flex-col justify-between overflow-hidden brutalist-shadow transition-transform duration-300 scale-95">
       
       <!-- Modal Header -->
-      <div class="flex flex-wrap items-center justify-between px-6 py-4 border-b border-[#232834] bg-[#1a1c20] gap-4">
+      <div class="preview-modal-header flex flex-wrap items-center justify-between px-6 py-4 border-b border-[#232834] bg-[#1a1c20] gap-4">
         <!-- Left: Title & URL -->
         <div class="flex flex-col">
           <h3 id="modal-project-title" class="font-headline-md text-headline-md text-white text-xl md:text-2xl">Nome do Projeto</h3>
@@ -824,7 +824,7 @@ Como pastor de jovens, entendo que por trás de cada clínica existe um sonho e 
         </div>
         
         <!-- Right: Action Buttons -->
-        <div class="flex items-center gap-3">
+        <div class="preview-modal-actions flex items-center gap-3">
           <a id="modal-btn-external" href="#" target="_blank" class="px-4 py-2 border border-[#232834] font-label-mono-sm text-label-mono-sm text-white uppercase hover:bg-surface-variant transition-colors flex items-center gap-2" data-i18n="modal.btn.external">
             Abrir Site <span class="material-symbols-outlined text-sm">open_in_new</span>
           </a>
