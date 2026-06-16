@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#111318"/>
-  <text x="3" y="24" font-family="Syne, sans-serif" font-size="20" font-weight="700" fill="#ffffff">B</text>
-  <text x="16" y="24" font-family="Syne, sans-serif" font-size="20" font-weight="700" fill="#0057FF">L</text>
-  <circle cx="28" cy="6" r="1.8" fill="#ffffff"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#111318"/><text x="3" y="24" fill="#fff" font-family="Syne, sans-serif" font-size="20" font-weight="700">B</text><text x="16" y="24" fill="#0057FF" font-family="Syne, sans-serif" font-size="20" font-weight="700">L</text><circle cx="28" cy="6" r="1.8" fill="#fff"/></svg>
