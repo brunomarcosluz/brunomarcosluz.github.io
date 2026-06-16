@@ -13,7 +13,7 @@
   <circle cx="38" cy="18" r="5" fill="#ffbd2e"/>
   <circle cx="56" cy="18" r="5" fill="#28c840"/>
   <rect x="120" y="10" width="560" height="16" rx="3" fill="#ddd9d3"/>
-  <text x="400" y="22" font-family="sans-serif" font-size="9" fill="#999" text-anchor="middle">leticia-borges/index.html</text>
+  <text x="400" y="22" font-family="sans-serif" font-size="9" fill="#999" text-anchor="middle">portifolio-leticia-eta.vercel.app</text>
   <!-- Page content -->
   <rect x="0" y="36" width="800" height="414" fill="url(#bg)"/>
   <!-- Nav bar -->
