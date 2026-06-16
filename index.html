@@ -211,6 +211,35 @@
       background: #0057ff;
     }
 
+    /* Responsive mobile adjustments */
+    @media (max-width: 640px) {
+      .hero-stats-grid {
+        flex-direction: column !important;
+      }
+      .hero-stats-grid > div {
+        width: 100% !important;
+      }
+      #projects-track-wrap {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+      }
+      .cinema-card iframe {
+        pointer-events: none !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .display-hero-mobile-fix {
+        font-size: 48px !important;
+        word-break: break-word;
+      }
+      #modal-device-toggles {
+        display: none !important;
+      }
+      #preview-modal .max-w-7xl {
+        max-width: 100% !important;
+      }
+    }
+
     /* Scrollbar for horizontal cases track */
     .scrollbar-thin::-webkit-scrollbar {
       height: 6px;
@@ -299,7 +328,7 @@
               Ver Cases
             </a>
           </div>
-          <div class="mt-24 md:mt-section-gap flex flex-wrap gap-stack-lg border-t border-[#232834] pt-stack-md">
+          <div class="mt-12 md:mt-24 flex flex-wrap gap-stack-lg border-t border-[#232834] pt-stack-md">
             <div>
               <p class="font-label-mono-sm text-label-mono-sm text-primary uppercase" data-i18n="hero.label.experiencia">EXPERIÊNCIA</p>
               <p class="font-headline-md text-headline-md text-white"><span data-counter="4">0</span><span data-i18n="hero.stat.anos">+ Anos</span></p>
@@ -316,7 +345,7 @@
         </div>
         <div class="col-span-4 md:col-span-4 relative mt-stack-lg md:mt-0">
           <div class="absolute inset-0 bg-gradient-to-tr from-surface to-transparent z-10 md:hidden"></div>
-          <img alt="Coding environment" class="w-full h-full object-cover sterile-border filter grayscale hover:grayscale-0 transition-all duration-500 min-h-[400px] md:min-h-[500px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOirkKqOyaWDu4j-Mk83o-7yI1WH86stylGchZf9k_0m8m0bFRVRL80E_W1Ix98TT8r1zVXwL7OW5RqVGsvV8GLTK3xnEzm3uEICfeiT3D_UQVeCtXCokmijNAuaDPaemuBzhT09HedHMlnPX8hdygV1crxIjCotOp0fjou9TxXlShKjUvBuoIsx-U-bvmXemQtpuoBLZuihBO3Qu5HvRPEi5vF9wdM4Lo8ZfHIjnrMNfZ6fopP2C2nT2w23u9ZqOq-rQK3IVgT8g">
+          <img alt="Coding environment" class="w-full h-full object-cover sterile-border filter grayscale hover:grayscale-0 transition-all duration-500 min-h-[220px] md:min-h-[500px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOirkKqOyaWDu4j-Mk83o-7yI1WH86stylGchZf9k_0m8m0bFRVRL80E_W1Ix98TT8r1zVXwL7OW5RqVGsvV8GLTK3xnEzm3uEICfeiT3D_UQVeCtXCokmijNAuaDPaemuBzhT09HedHMlnPX8hdygV1crxIjCotOp0fjou9TxXlShKjUvBuoIsx-U-bvmXemQtpuoBLZuihBO3Qu5HvRPEi5vF9wdM4Lo8ZfHIjnrMNfZ6fopP2C2nT2w23u9ZqOq-rQK3IVgT8g">
         </div>
       </div>
     </section>
@@ -645,7 +674,7 @@
                 <span class="font-label-mono-lg text-label-mono-lg text-surface-variant">01</span>
                 <h3 class="font-headline-md text-xl md:text-2xl text-white group-hover:text-primary transition-colors" data-i18n="process.step1.title">Briefing &amp; Descoberta</h3>
               </div>
-              <p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm ml-12" data-i18n="process.step1.desc">Análise profunda dos requisitos de negócio e restrições técnicas para mapear o escopo exato da solução.</p>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm ml-6 md:ml-12" data-i18n="process.step1.desc">Análise profunda dos requisitos de negócio e restrições técnicas para mapear o escopo exato da solução.</p>
             </div>
             <!-- Step 2 -->
             <div class="sterile-border border-x-0 border-t-0 py-8 group reveal reveal-delay-1">
@@ -653,7 +682,7 @@
                 <span class="font-label-mono-lg text-label-mono-lg text-surface-variant">02</span>
                 <h3 class="font-headline-md text-xl md:text-2xl text-white group-hover:text-primary transition-colors" data-i18n="process.step2.title">Design &amp; Proposta</h3>
               </div>
-              <p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm ml-12" data-i18n="process.step2.desc">Estruturação visual brutalista, aprovação de wireframes e definição rigorosa de prazos e valores.</p>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm ml-6 md:ml-12" data-i18n="process.step2.desc">Estruturação visual brutalista, aprovação de wireframes e definição rigorosa de prazos e valores.</p>
             </div>
             <!-- Step 3 -->
             <div class="sterile-border border-x-0 border-t-0 py-8 group reveal reveal-delay-2">
@@ -661,7 +690,7 @@
                 <span class="font-label-mono-lg text-label-mono-lg text-surface-variant">03</span>
                 <h3 class="font-headline-md text-xl md:text-2xl text-white group-hover:text-primary transition-colors" data-i18n="process.step3.title">Desenvolvimento</h3>
               </div>
-              <p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm ml-12" data-i18n="process.step3.desc">Codificação limpa, otimizada para performance, com testes contínuos em ambiente de homologação.</p>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm ml-6 md:ml-12" data-i18n="process.step3.desc">Codificação limpa, otimizada para performance, com testes contínuos em ambiente de homologação.</p>
             </div>
             <!-- Step 4 -->
             <div class="sterile-border border-x-0 border-t-0 py-8 group reveal reveal-delay-3">
@@ -669,7 +698,7 @@
                 <span class="font-label-mono-lg text-label-mono-lg text-surface-variant">04</span>
                 <h3 class="font-headline-md text-xl md:text-2xl text-white group-hover:text-primary transition-colors" data-i18n="process.step4.title">Entrega &amp; Suporte</h3>
               </div>
-              <p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm ml-12" data-i18n="process.step4.desc">Deploy seguro, transferência de documentação técnica e garantia de estabilidade pós-lançamento.</p>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm ml-6 md:ml-12" data-i18n="process.step4.desc">Deploy seguro, transferência de documentação técnica e garantia de estabilidade pós-lançamento.</p>
             </div>
           </div>
         </div>
