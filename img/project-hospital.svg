@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1c20;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#282a2e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g1)"/>
+  <rect x="40" y="40" width="720" height="370" fill="none" stroke="#333539" stroke-width="1"/>
+  <text x="400" y="200" font-family="monospace" font-size="24" fill="#0057FF" text-anchor="middle" font-weight="bold">HOSPITAL PUC-CAMPINAS</text>
+  <text x="400" y="240" font-family="monospace" font-size="14" fill="#c3c7cb" text-anchor="middle">PHP · Oracle · Linux · n8n</text>
+  <text x="400" y="280" font-family="monospace" font-size="12" fill="#6b7280" text-anchor="middle">Sistema de Gestão Hospitalar</text>
+</svg>

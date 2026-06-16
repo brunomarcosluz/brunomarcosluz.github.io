@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+  <defs>
+    <linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1c20;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#232834;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="400" fill="url(#cg)"/>
+  <text x="150" y="180" font-family="monospace" font-size="16" fill="#0057FF" text-anchor="middle" font-weight="bold">BRUNO + LETÍCIA</text>
+  <text x="150" y="210" font-family="monospace" font-size="10" fill="#c3c7cb" text-anchor="middle" opacity="0.6">Equipe de desenvolvimento</text>
+</svg>

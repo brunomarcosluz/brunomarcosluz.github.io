@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1115;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16181d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="warn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1c20;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#222428;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Full dark background -->
+  <rect x="0" y="0" width="800" height="450" fill="#0f1115"/>
+  <!-- Lock icon -->
+  <circle cx="400" cy="170" r="40" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="380" y="150" width="40" height="30" rx="4" fill="none" stroke="#333" stroke-width="2"/>
+  <circle cx="400" cy="170" r="6" fill="#333"/>
+  <!-- Text -->
+  <text x="400" y="250" font-family="sans-serif" font-size="20" font-weight="bold" fill="#666" text-anchor="middle">Preview indisponível</text>
+  <text x="400" y="280" font-family="sans-serif" font-size="13" fill="#444" text-anchor="middle">Site protegido contra varreduras</text>
+  <text x="400" y="300" font-family="sans-serif" font-size="13" fill="#444" text-anchor="middle">Clique para acessar diretamente</text>
+  <!-- Security border accent -->
+  <rect x="260" y="320" width="280" height="1" fill="#333"/>
+</svg>
