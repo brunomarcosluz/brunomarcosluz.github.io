@@ -713,7 +713,7 @@
       pt: 'Site institucional para estúdio especializado em tranças de cabelo. Foco em experiência mobile, WhatsApp e portfólio visual.',
       en: 'Institutional website for a hair braiding studio. Focus on mobile experience, WhatsApp and visual portfolio.'
     },
-    'projects.project5.name': { pt: 'Todetranca', en: 'Todetranca' },
+    'projects.project5.name': { pt: 'Tô de Trança', en: 'Tô de Trança' },
     'projects.project5.desc': {
       pt: 'Aplicação web moderna para gestão simplificada. Interface limpa, performance otimizada e experiência de usuário fluida.',
       en: 'Modern web application for streamlined management. Clean interface, optimized performance, fluid UX.'
